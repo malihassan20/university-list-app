@@ -1,0 +1,34 @@
+.pagination-container {
+  align-self: flex-end;
+  background: $white;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 25px;
+  max-width: 250px;
+  align-items: center;
+  width: 100%;
+  font-size: 15px;
+
+  .pagination-item {
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  .active {
+    color: $primary;
+  }
+
+  @media (max-width: 356px) {
+    max-width: 220px;
+  }
+}

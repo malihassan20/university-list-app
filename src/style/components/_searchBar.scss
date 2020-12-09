@@ -1,0 +1,24 @@
+.search-bar-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1000px;
+
+  button {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  @media (max-width: 580px) {
+    flex-wrap: wrap;
+
+    .custom-input {
+      margin-right: 0;
+    }
+
+    button {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

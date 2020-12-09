@@ -1,0 +1,11 @@
+.universities-list-outter-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.universities-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}

@@ -1,0 +1,19 @@
+.header-container {
+  order: 1;
+  background: $primary;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $white;
+  align-items: center;
+  font-size: 16px;
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.logo-container {
+  font-size: 20px;
+}

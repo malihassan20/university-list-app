@@ -1,0 +1,28 @@
+.university-card-container {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  width: 28%;
+
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  @media (max-width: 955px) {
+    width: 40%;
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+    margin-right: 0;
+  }
+}

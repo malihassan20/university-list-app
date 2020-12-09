@@ -1,0 +1,13 @@
+@import "./variable";
+@import "./base";
+
+@import "./components/header";
+@import "./components/footer";
+@import "./components/navbar";
+@import "./components/universityCard";
+@import "./components/pagination";
+@import "./components/searchBar";
+
+@import "./containers/universitiesList";
+@import "./containers/newsletterForm";
+@import "./containers/home";
