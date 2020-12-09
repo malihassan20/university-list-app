@@ -1,1 +1,9 @@
-{}
+{
+  "users": [
+    {
+      "fullname": "tyest",
+      "email": "contact@alihassan.dev",
+      "id": 1
+    }
+  ]
+}

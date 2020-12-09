@@ -1,7 +1,23 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
+import { useState } from "react";
+
+import { JSON_SERVER_URL } from "../constants";
 
 const NewsletterForm = () => {
+  const [message, setMessage] = useState("");
+
+  // save user info into the json file
+  const saveUserData = async (data) => {
+    await axios.post(JSON_SERVER_URL + "/users", data);
+    setMessage("User Created Successfully");
+
+    setTimeout(() => {
+      setMessage("");
+    }, 3000);
+  };
+
   const formik = useFormik({
     initialValues: {
       fullname: "",
@@ -16,13 +32,17 @@ const NewsletterForm = () => {
         .email("Please enter correct email address")
         .required("Please enter your email address"),
     }),
-    onSubmit: (values) => {},
+    onSubmit: (values) => {
+      saveUserData(values);
+      formik.resetForm();
+    },
   });
 
   return (
     <div className="newsletter-form-outter-container">
       <div className="newsletter-form-container">
         <h3>Subscribe to our Newsletter</h3>
+        {message.length > 0 && <p className="success-message">{message}</p>}
         <form onSubmit={formik.handleSubmit}>
           <input
             className="custom-input"
